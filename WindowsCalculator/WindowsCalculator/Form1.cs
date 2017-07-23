@@ -13,5 +13,16 @@ namespace WindowsCalculator {
         public Form1() {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, EventArgs e) {
+
+            if (resultBox.Text == "0")
+                resultBox.Clear();
+
+            var button = (Button)sender;
+            resultBox.Text = resultBox.Text + button.Text;
+        }
+
+        private void buttonClearEntry_Click(object sender, EventArgs e) => resultBox.Text = "0";
     }
 }
