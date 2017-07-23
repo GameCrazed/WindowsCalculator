@@ -42,6 +42,7 @@
             this.buttonClear = new System.Windows.Forms.Button();
             this.buttonClearEntry = new System.Windows.Forms.Button();
             this.resultBox = new System.Windows.Forms.TextBox();
+            this.equation = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button7
@@ -229,6 +230,7 @@
             this.buttonClear.TabIndex = 17;
             this.buttonClear.Text = "C";
             this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.ButtonClear_Click);
             // 
             // buttonClearEntry
             // 
@@ -251,11 +253,23 @@
             this.resultBox.Text = "0";
             this.resultBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // equation
+            // 
+            this.equation.AutoSize = true;
+            this.equation.BackColor = System.Drawing.SystemColors.Window;
+            this.equation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equation.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.equation.Location = new System.Drawing.Point(18, 19);
+            this.equation.Name = "equation";
+            this.equation.Size = new System.Drawing.Size(0, 20);
+            this.equation.TabIndex = 21;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(274, 261);
+            this.Controls.Add(this.equation);
             this.Controls.Add(this.resultBox);
             this.Controls.Add(this.buttonEquals);
             this.Controls.Add(this.buttonClear);
@@ -306,6 +320,7 @@
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Button buttonClearEntry;
         private System.Windows.Forms.TextBox resultBox;
+        private System.Windows.Forms.Label equation;
     }
 }
 

@@ -19,8 +19,10 @@ namespace WindowsCalculator {
         }
 
         private void Button_Click(object sender, EventArgs e) {
-            if ((resultBox.Text == "0") || (OperationPressed))
+            if ((resultBox.Text == "0") || (OperationPressed)) {
+                OperationPressed = false;
                 resultBox.Clear();
+            }
 
             var button = (Button)sender;
             resultBox.Text = resultBox.Text + button.Text;
@@ -33,9 +35,12 @@ namespace WindowsCalculator {
             Operation = button.Text;
             Value = Double.Parse(resultBox.Text);
             OperationPressed = true;
+            equation.Text = Value + " " + Operation;
         }
 
         private void ButtonEquals_Click(object sender, EventArgs e) {
+            equation.Text = "";
+            OperationPressed = false;
             switch (Operation) {
                 case "+":
                     resultBox.Text = (Value + Double.Parse(resultBox.Text)).ToString();
@@ -52,7 +57,11 @@ namespace WindowsCalculator {
                 default:
                     break;
             }
-            OperationPressed = false;
+        }
+
+        private void ButtonClear_Click(object sender, EventArgs e) {
+            resultBox.Text = "0";
+            Value = 0;
         }
     }
 }
