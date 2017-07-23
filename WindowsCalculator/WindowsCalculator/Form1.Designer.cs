@@ -174,6 +174,7 @@
             this.buttonAdd.TabIndex = 15;
             this.buttonAdd.Text = "+";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.Operator_Click);
             // 
             // buttonSubtract
             // 
@@ -184,6 +185,7 @@
             this.buttonSubtract.TabIndex = 14;
             this.buttonSubtract.Text = "-";
             this.buttonSubtract.UseVisualStyleBackColor = true;
+            this.buttonSubtract.Click += new System.EventHandler(this.Operator_Click);
             // 
             // buttonMultiply
             // 
@@ -194,6 +196,7 @@
             this.buttonMultiply.TabIndex = 13;
             this.buttonMultiply.Text = "*";
             this.buttonMultiply.UseVisualStyleBackColor = true;
+            this.buttonMultiply.Click += new System.EventHandler(this.Operator_Click);
             // 
             // buttonDivide
             // 
@@ -204,6 +207,7 @@
             this.buttonDivide.TabIndex = 12;
             this.buttonDivide.Text = "/";
             this.buttonDivide.UseVisualStyleBackColor = true;
+            this.buttonDivide.Click += new System.EventHandler(this.Operator_Click);
             // 
             // buttonEquals
             // 
@@ -214,6 +218,7 @@
             this.buttonEquals.TabIndex = 19;
             this.buttonEquals.Text = "=";
             this.buttonEquals.UseVisualStyleBackColor = true;
+            this.buttonEquals.Click += new System.EventHandler(this.ButtonEquals_Click);
             // 
             // buttonClear
             // 
@@ -234,7 +239,7 @@
             this.buttonClearEntry.TabIndex = 16;
             this.buttonClearEntry.Text = "CE";
             this.buttonClearEntry.UseVisualStyleBackColor = true;
-            this.buttonClearEntry.Click += new System.EventHandler(this.buttonClearEntry_Click);
+            this.buttonClearEntry.Click += new System.EventHandler(this.ButtonClearEntry_Click);
             // 
             // resultBox
             // 
